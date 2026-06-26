@@ -8,10 +8,11 @@
 1：人机交互页面设计：我的思路是通过OLED的屏幕范围划分，将文字部分保持不变，做一个数组指针来做现在当前选项位置。如图：
 ![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142253.png)
 2:数据采集：先要用到信号发生器来产生信号，我这边接的是直流电源给信号发生器。通过示波器调节，产生俩种波形，如图：
-![image](<img width="2053" height="1208" alt="屏幕截图 2026-06-26 142344" src="https://github.com/user-attachments/assets/dfe8d1d6-2721-43ea-8126-3fce171bc0a0" />)
-![image](<img width="1987" height="1226" alt="屏幕截图 2026-06-26 142336" src="https://github.com/user-attachments/assets/0f8400d6-92bf-4d31-b4fe-e1604f0f8438" />)
+![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142336.png)
+![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142344.png)
 3：代码实现部分：简单介绍，详细可看上面源码：人机交互是通过状态机实现，通过EXTI中断来检测按键是否被按下。通过函数封装来切换对应功能。数据采集：是通过ADC配置采集实现，main()中只做读取。代码清晰。
 因为设计到了多路信号的读取，我这边用了DMA，这样我的主函数就可以不被打断，信号源就可以不被其他任务打断。信号稳定。
 主程序中只对读取的信号做处理。
+![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142442.png)
 具体的代码，请看程序。
 ![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142134.png)
