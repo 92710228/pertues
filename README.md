@@ -15,4 +15,4 @@
 因为设计到了多路信号的读取，我这边用了DMA，这样我的主函数就可以不被打断，信号源就可以不被其他任务打断。信号稳定。
 主程序中只对读取的信号做处理。
 具体的代码，请看程序。
-![image](<img width="1615" height="1138" alt="屏幕截图 2026-06-26 142253" src="https://github.com/user-attachments/assets/dcd1350e-237a-4ecf-893c-2195fecd278e" />)
+![image](https://github.com/92710228/pertues/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-26%20142134.png)
